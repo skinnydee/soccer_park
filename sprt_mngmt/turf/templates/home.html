@@ -1,0 +1,11 @@
+{% extends "templates/base.html" %}
+{% block content %}
+        <h1>This is a homepage</h1>
+        <p>This is the content</p>
+        <p>The team :</p>
+        {% for players in team %}
+            <h3> Name : {{ players.Name }}</h3>
+            <p> Rank : {{ players.Rank }}</p>
+            <p>Poition : {{ players.position }}</p>
+        {% endfor %}
+{% endblock content %}    
