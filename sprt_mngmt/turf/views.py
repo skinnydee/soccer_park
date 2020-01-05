@@ -19,8 +19,8 @@ def home(request):
     context = {
         'team':players
     }
-    return render(request,'templates/home.html', context)
+    return render(request,'turf/home.html', context)
 
 def about(request):
-    return render(request,'turf/templates/about.html')
+    return render(request,'turf/about.html')
 
