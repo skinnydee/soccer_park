@@ -1,14 +1,15 @@
 {% load static %}
+<!doctype html>
 <html>
-    <head>
-       <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'static/main.css' %}"> 
+	<link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
+	<link rel="shortcut icon" href="{% static "img/favicon.ico" type="img/x-icon" %}">
  
         {% if title %}
                <title>Turf - {{ title }}</title>
@@ -30,20 +31,6 @@
                             {% endif %}
                             {% block content %}{% endblock %}
                           </div>
-                          <div class="col-md-4">
-                            <div class="content-section">
-                              <h3>Our Sidebar</h3>
-                              <p class='text-muted'>You can put any information here you'd like.
-                                <ul class="list-group">
-                                  <li class="list-group-item list-group-item-light">Latest Posts</li>
-                                  <li class="list-group-item list-group-item-light">Announcements</li>
-                                  <li class="list-group-item list-group-item-light">Calendars</li>
-                                  <li class="list-group-item list-group-item-light">etc</li>
-                                </ul>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
                       </main>
         
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
