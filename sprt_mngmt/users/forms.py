@@ -4,12 +4,12 @@ from django.contrib.auth.forms import UserCreationForm
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
-    fname = forms.CharField(max_length=255, required=True)
-    lname = forms.CharField(max_length=255, required=True)
+    First_Name = forms.CharField(max_length=255, required=True)
+    Last_Name = forms.CharField(max_length=255, required=True)
     age = forms.IntegerField(max_value=16, required=True)
     
 
 
     class Meta:
         model = User
-        fields = ['Firts_name','username','email','password1','password2']
+        fields = ('First_Name','Last_Name','age','username','email','password1','password2',)
