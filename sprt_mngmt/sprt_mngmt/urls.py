@@ -18,6 +18,7 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from users import views as users_views
 from coach import views as coach_views
+from attendance import views as views_att
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +29,5 @@ urlpatterns = [
     path('regcoach/',coach_views.coach_register,name='reg'),
     path('coachin/',auth_views.LoginView.as_view(template_name = 'coach/login.html'),name = 'c_login'),
     path('coachout/',auth_views.LogoutView.as_view(template_name = 'coach/logout.html'), name= 'c_logout'),
+    path('attendance/',views_att.att, name= 'staff')
 ]

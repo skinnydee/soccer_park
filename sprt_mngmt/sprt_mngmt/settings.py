@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [ 
+    'attendance.apps.AttendanceConfig',
     'coach.apps.CoachConfig',
     'turf.apps.TurfConfig',
     'users.apps.UsersConfig',
