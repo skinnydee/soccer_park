@@ -17,7 +17,11 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from users import views as users_views
+<<<<<<< HEAD
 from attendance import views as att_views
+=======
+from coach import views as coach_views
+>>>>>>> dev
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +29,11 @@ urlpatterns = [
     path('login/',auth_views.LoginView.as_view(template_name = 'users/login.html'), name= 'login'),
     path('logout/',auth_views.LogoutView.as_view(template_name = 'users/logout.html'), name= 'logout'),
     path('',include('turf.urls')),
+<<<<<<< HEAD
     path('attendance/',auth_views.AuthenticationForm(template_name = 'attendance/attend.html'),name = 'attendance')
+=======
+    path('regcoach/',coach_views.coach_register,name='reg'),
+    path('coachin/',auth_views.LoginView.as_view(template_name = 'coach/login.html'),name = 'c_login'),
+    path('coachout/',auth_views.LogoutView.as_view(template_name = 'coach/logout.html'), name= 'c_logout'),
+>>>>>>> dev
 ]
