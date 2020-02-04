@@ -1,6 +1,9 @@
 {% extends 'turf/base.html' %}
 
-{% for  context in players %}
-    <h3> Name : {{ context.First_Name }}</h3>
+{% block content %}
+
+{% for player in players %}
+    <h3> Name : {{ player.first_name }}</h3>
 {% endfor %}
-    
+
+{% endblock content %}    
