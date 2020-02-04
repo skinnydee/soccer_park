@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from users.models import User
+from users.models import Profile
 # Create your views here.
 
 def att(request):
     context = {
 
-        'player' : User.username
+        'players' : Profile.User
 
     }
-    return(request, 'attendance/staff.html')
+    return render(request, 'attendance/staff.html', context)
     

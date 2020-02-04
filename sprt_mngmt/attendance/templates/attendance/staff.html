@@ -1,6 +1,6 @@
-{% extends 'base.html' %}
+{% extends 'turf/base.html' %}
 
-{% for players in team %}
-    <h3> Name : {{ players.username }}</h3>
+{% for  context in players %}
+    <h3> Name : {{ context.First_Name }}</h3>
 {% endfor %}
     
