@@ -7,6 +7,7 @@ class UserRegisterForm(UserCreationForm):
     Last_Name = forms.CharField(max_length=255, required=True)
     age = forms.IntegerField(max_value=16, required=True)
     email = forms.EmailField()
+    is_coach = forms.BooleanField(Default=False)
  
 
     class Meta:
