@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
 class UserRegisterForm(UserCreationForm): 
-    is_coach = forms.BooleanField(initial=False)
     First_Name = forms.CharField(max_length=255, required=True)
     Last_Name = forms.CharField(max_length=255, required=True)
     age = forms.IntegerField(max_value=16, required=True)
