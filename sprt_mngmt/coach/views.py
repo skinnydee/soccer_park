@@ -4,5 +4,5 @@ from django.shortcuts import render
 
 def attendance(request):
     template_name = 'coach.attendance.html'
-    player = filter(User.objects.na)
+    player = filter(User.objects.all)
     return render(request,'coach/attendance.html', {'players' : player})
