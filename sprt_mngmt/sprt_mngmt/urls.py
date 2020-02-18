@@ -29,5 +29,5 @@ urlpatterns = [
     path('regcoach/',coach_views.coach_register,name='reg'),
     path('coachin/',auth_views.LoginView.as_view(template_name = 'coach/login.html'),name = 'c_login'),
     path('coachout/',auth_views.LogoutView.as_view(template_name = 'coach/logout.html'), name= 'c_logout'),
-    path('attendance/',views_att.att, name= 'staff')
+    path('attendance/',views_att.attendance.as_view(), name= 'staff')
 ]

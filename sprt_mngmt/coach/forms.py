@@ -1,13 +1,14 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
- 
-class CoachForm(UserCreationForm):
+
+class CoachRegisterForm(UserCreationForm): 
+    is_coach = forms.BooleanField(initial=False)
     First_Name = forms.CharField(max_length=255, required=True)
     Last_Name = forms.CharField(max_length=255, required=True)
     age = forms.IntegerField(min_value=20, required=True)
     email = forms.EmailField()
-         
+
     class Meta:
         model = User
         fields = (
@@ -19,9 +20,9 @@ class CoachForm(UserCreationForm):
                     'password1',
                     'password2',
                  )
-    
-    def save(self, commit = True):
-        user = super(CoachForm, self).save(commit = False)
+
+    def save_coach(self, commit = True):
+        user = super(CoachRegisterForm, self).save(commit = False)
         user.first_name = self.cleaned_data['First_Name']
         user.last_name = self.cleaned_data['Last_Name']
         user.age= self.cleaned_data['age']

@@ -2,14 +2,13 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
-class UserRegisterForm(UserCreationForm):
+class UserRegisterForm(UserCreationForm): 
+    is_coach = forms.BooleanField(initial=False)
     First_Name = forms.CharField(max_length=255, required=True)
     Last_Name = forms.CharField(max_length=255, required=True)
     age = forms.IntegerField(max_value=16, required=True)
     email = forms.EmailField()
-    is_coach = forms.BooleanField(Default=False)
- 
-
+   
     class Meta:
         model = User
         fields = (
@@ -22,7 +21,7 @@ class UserRegisterForm(UserCreationForm):
                     'password2',
                  )
     
-    def save(self, commit = True):
+    def save_student(self, commit = True):
         user = super(UserRegisterForm, self).save(commit = False)
         user.first_name = self.cleaned_data['First_Name']
         user.last_name = self.cleaned_data['Last_Name']
