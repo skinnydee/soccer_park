@@ -80,16 +80,17 @@
 	<tr>
 		<th>
     {% for player in players %}
-        {{player}
-    {% endfor %}
-      </th>
-			<th><form >
+      <li>{{player.username}}</li>
 
     <input type="radio" id="asp" name="as" checked>
     <label style="color:white;" for="asp">Present</label>&nbsp&nbsp&nbsp&nbsp&nbsp
 
     <input type="radio" id="asa" name="as">
     <label style="color:red;" for="asa">Absent</label>
+    {% endfor %}
+      </th>
+			<th><form >
+
 
 </form></th>
 		</tr>
