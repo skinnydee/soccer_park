@@ -9,3 +9,4 @@ def attendance(request):
         "players" : players
     }
     return render(request,'coach/attendance.html', context)
+

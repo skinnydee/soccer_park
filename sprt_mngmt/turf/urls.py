@@ -1,9 +1,9 @@
 
 from django.urls import path
 from . import views
-from sprt_mngmt import urls
 
 urlpatterns =[
-    path('',views.home, name = 'turf-home'),
-    path('about/',views.about, name = 'turf-about'),
+    path('',views.home, name = 'home'),
+    path('about/',views.about, name = 'about'),
+    path('calendar/',views.calendar, name = 'calendar')
 ]
